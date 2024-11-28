@@ -98,7 +98,7 @@ static long cma_malloc_ioctl(struct file* fptr, const unsigned int cmd, const un
     struct cma_space_request_struct *userReq, req;
     long retval;
     userReq = (void*)arg;
-    if (!access_ok(VERIFY_WRITE, userReq, sizeof(struct cma_space_request_struct))) return -EFAULT;
+    if (!access_ok(userReq, sizeof(struct cma_space_request_struct))) return -EFAULT;
     if (copy_from_user(&req, userReq, sizeof(struct cma_space_request_struct)) != 0) return -EBADE;
     switch(cmd){
         case CMA_MALLOC_ALLOC:
