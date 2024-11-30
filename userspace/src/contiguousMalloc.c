@@ -11,6 +11,8 @@
 #include "cma_malloc.h"
 #include "contiguousMalloc.h"
 
+#define DEBUG
+
 #ifdef DEBUG
     #define DEBUGPRINT 1
 #else
