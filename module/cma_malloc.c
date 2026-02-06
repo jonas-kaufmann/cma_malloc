@@ -10,7 +10,7 @@
 #include <asm/uaccess.h>            // access_ok
 #include <linux/list.h>             // The linked list
 
-#include "../cma_malloc.h"          // Contains module specific information like magic number
+#include <cma_malloc/cma_malloc.h>          // Contains module specific information like magic number
 
 /**
  * YOU DO NOT WANT TO USE CMA LIKE THIS
